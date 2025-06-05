@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c6372eb8-2371-4340-a006-de8d2c81ce47</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="GeoJSON.Net" Version="1.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.5" PrivateAssets="all">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\MyCidax.Exceptions\MyCidax.Exceptions.csproj" />
+    <ProjectReference Include="..\MyCidax.Application\MyCidax.Application.csproj" />
+    <ProjectReference Include="..\MyCidax.Domain\MyCidax.Domain.csproj" />
+    <ProjectReference Include="..\MyCidax.Infrastructure\MyCidax.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
